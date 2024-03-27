@@ -34,8 +34,8 @@ if (modifyButton) {
         }).then(() => {
                 alert('수정이 완료되었습니다.');
                 location.replace(`/articles/${id}`);
-        })
-    })
+        });
+    });
 }
 
 // 등록 기능
@@ -55,6 +55,6 @@ if (createButton) {
         }).then(() => {
             alert('등록되었습니다.');
             location.replace("/articles");
-        })
-    })
+        });
+    });
 }
