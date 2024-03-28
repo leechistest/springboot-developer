@@ -11,7 +11,7 @@ public class UserViewController {
     }
 
     @GetMapping("/signup")
-    public String singup() {
+    public String signup() {
         return "signup";
     }
 }

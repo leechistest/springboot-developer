@@ -20,14 +20,14 @@ public class ExampleController {
         examplePerson.setHobbies(List.of("운동", "독서"));
 
         model.addAttribute("person", examplePerson);
-        model.addAttribute("todoay", LocalDate.now());
+        model.addAttribute("today", LocalDate.now());
 
         return "example";
     }
 
     @Setter
     @Getter
-    class Person {
+    static class Person {
         private Long id;
         private String name;
         private int age;

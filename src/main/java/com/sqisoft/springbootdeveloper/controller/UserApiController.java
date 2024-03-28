@@ -17,15 +17,14 @@ public class UserApiController {
     private final UserService userService;
 
     @PostMapping("/user")
-    public String signUp(AddUserRequest request) {
+    public String signup(AddUserRequest request) {
         userService.save(request);
         return "redirect:/login";
     }
 
     @GetMapping("/logout")
     public String logout(HttpServletRequest request, HttpServletResponse response) {
-        new SecurityContextLogoutHandler().logout(request, response,
-                SecurityContextHolder.getContext().getAuthentication());
-        return "rediredt:/login";
+        new SecurityContextLogoutHandler().logout(request, response, SecurityContextHolder.getContext().getAuthentication());
+        return "redirect:/login";
     }
 }

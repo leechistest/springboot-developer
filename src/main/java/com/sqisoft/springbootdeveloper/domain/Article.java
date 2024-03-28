@@ -32,7 +32,7 @@ public class Article {
 
     @LastModifiedDate
     @Column(name = "updated_at")
-    private LocalDateTime updateAt;
+    private LocalDateTime updatedAt;
 
     @Builder // 빌더 패턴으로 객체 생성
     public Article(String title, String content) {

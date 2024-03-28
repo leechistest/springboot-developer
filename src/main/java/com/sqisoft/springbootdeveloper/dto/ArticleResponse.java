@@ -11,5 +11,5 @@ public class ArticleResponse {
     public ArticleResponse(Article article) {
         this.title = article.getTitle();
         this.content = article.getContent();
-  ;  }
+    }
 }
