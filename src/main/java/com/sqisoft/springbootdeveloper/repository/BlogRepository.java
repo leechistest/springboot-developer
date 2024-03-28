@@ -3,5 +3,4 @@ package com.sqisoft.springbootdeveloper.repository;
 import com.sqisoft.springbootdeveloper.domain.Article;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface BlogRepository extends JpaRepository<Article, Long> {
-}
+public interface BlogRepository extends JpaRepository<Article, Long> {}

@@ -8,7 +8,7 @@
 <body>
 <div class="p-5 mb-5 text-center</> bg-light">
     <h1 class="mb-3">My Blog</h1>
-  <h4 class="mb-3">블로그에 오신 것을 환영합니다.</h4>
+    <h4 class="mb-3">블로그에 오신 것을 환영합니다.</h4>
 </div>
 
 <div class="container mt-5">
@@ -20,11 +20,14 @@
                     <input type="text" class="form-control" placeholder="제목" id="title" th:value="${article.title}">
                 </header>
                 <section class="mb-5">
-                    <textarea class="form-control h-25" rows="10" placeholder="내용" id="content" th:text="${article.content}"></textarea>
+                    <textarea class="form-control h-25" rows="10" placeholder="내용" id="content"
+                              th:text="${article.content}"></textarea>
                 </section>
 
-                <button th:if="${article.id} != null" type="button" id="modify-btn" class="btn btn-primary btn-sm">수정</button>
-        <button th:if="${article.id} == null" type="button" id="create-btn" class="btn btn-primary btn-sm">등록</button>
+                <button th:if="${article.id} != null" type="button" id="modify-btn" class="btn btn-primary btn-sm">수정
+                </button>
+                <button th:if="${article.id} == null" type="button" id="create-btn" class="btn btn-primary btn-sm">등록
+                </button>
             </article>
         </div>
     </div>

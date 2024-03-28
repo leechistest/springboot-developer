@@ -11,26 +11,28 @@ import java.util.List;
 
 @Controller
 public class ExampleController {
-    @GetMapping("/thymeleaf/example")
-    public String thymeleafExample(Model model) {
-        Person examplePerson = new Person();
-        examplePerson.setId(1L);
-        examplePerson.setName("홍길동");
-        examplePerson.setAge(11);
-        examplePerson.setHobbies(List.of("운동", "독서"));
 
-        model.addAttribute("person", examplePerson);
-        model.addAttribute("today", LocalDate.now());
+  @GetMapping("/thymeleaf/example")
+  public String thymeleafExample(Model model) {
+    Person examplePerson = new Person();
+    examplePerson.setId(1L);
+    examplePerson.setName("홍길동");
+    examplePerson.setAge(11);
+    examplePerson.setHobbies(List.of("운동", "독서"));
 
-        return "example";
-    }
+    model.addAttribute("person", examplePerson);
+    model.addAttribute("today", LocalDate.now());
 
-    @Setter
-    @Getter
-    static class Person {
-        private Long id;
-        private String name;
-        private int age;
-        private List<String> hobbies;
-    }
+    return "example";
+  }
+
+  @Setter
+  @Getter
+  static class Person {
+
+    private Long id;
+    private String name;
+    private int age;
+    private List<String> hobbies;
+  }
 }

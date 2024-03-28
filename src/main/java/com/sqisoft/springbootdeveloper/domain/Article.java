@@ -15,33 +15,33 @@ import java.time.LocalDateTime;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Article {
 
-    @Id
-    @Column(name = "id", updatable = false)
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+  @Id
+  @Column(name = "id", updatable = false)
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
 
-    @Column(name = "title", nullable = false)
-    private String title;
+  @Column(name = "title", nullable = false)
+  private String title;
 
-    @Column(name = "content", nullable = false)
-    private String content;
+  @Column(name = "content", nullable = false)
+  private String content;
 
-    @CreatedDate
-    @Column(name = "created_at")
-    private LocalDateTime createdAt;
+  @CreatedDate
+  @Column(name = "created_at")
+  private LocalDateTime createdAt;
 
-    @LastModifiedDate
-    @Column(name = "updated_at")
-    private LocalDateTime updatedAt;
+  @LastModifiedDate
+  @Column(name = "updated_at")
+  private LocalDateTime updatedAt;
 
-    @Builder // 빌더 패턴으로 객체 생성
-    public Article(String title, String content) {
-        this.title = title;
-        this.content = content;
-    }
+  @Builder // 빌더 패턴으로 객체 생성
+  public Article(String title, String content) {
+    this.title = title;
+    this.content = content;
+  }
 
-    public void update(String title, String content) {
-        this.title = title;
-        this.content = content;
-    }
+  public void update(String title, String content) {
+    this.title = title;
+    this.content = content;
+  }
 }

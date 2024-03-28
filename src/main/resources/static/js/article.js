@@ -8,8 +8,8 @@ if (deleteButton) {
         fetch(`/api/articles/${id}`, {
             method: 'DELETE'
         }).then(() => {
-                alert('삭제가 완료되었습니다.');
-                location.replace('/articles');
+            alert('삭제가 완료되었습니다.');
+            location.replace('/articles');
         });
     });
 }
@@ -32,8 +32,8 @@ if (modifyButton) {
                 content: document.getElementById('content').value
             })
         }).then(() => {
-                alert('수정이 완료되었습니다.');
-                location.replace(`/articles/${id}`);
+            alert('수정이 완료되었습니다.');
+            location.replace(`/articles/${id}`);
         });
     });
 }
